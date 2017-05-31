@@ -1,0 +1,61 @@
+nav li {
+	position: relative;
+    display: inline-block;
+    -webkit-backface-visibility: hidden;
+    vertical-align: middle;
+    padding-bottom: 6px;
+}
+
+nav li a {
+    position: relative;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+nav li, nav li a, section {
+	color: white;
+	font-size: 1.1em;
+	font-family: 'Indie Flower', cursive;
+}
+
+section div.section-center {
+	position: relative;
+    text-align: center;
+    font-size: 2em;
+}
+
+#container {
+	height:100%;
+}
+
+/* --- Header --- */
+#header-wrapper {
+	height: 50px;
+}
+#header {
+	position: absolute;
+    top: 17px;
+    right: 0;
+}
+
+#header-nav-wrapper {
+	position: relative;
+    margin: 0 20px;
+}
+
+#header-navigation {
+	position: relative;
+}
+
+.header-nav-separator:before {
+	content: "/";
+}
+
+/* --- Sections --- */
+#sections {
+	position: relative;
+    width: 100%;
+    margin-top: 10%;
+}
