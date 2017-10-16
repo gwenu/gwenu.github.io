@@ -1,20 +1,11 @@
-nav li {
-	position: relative;
-    display: inline-block;
-    -webkit-backface-visibility: hidden;
-    vertical-align: middle;
-    padding-bottom: 6px;
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+#container {
+	height: 100%;
 }
 
-nav li a {
-    position: relative;
-    display: block;
-    height: 20px;
-    overflow: hidden;
-    text-decoration: none;
-}
-
-nav li, nav li a, section {
+/* --- Sections --- */
+section {
 	color: white;
 	font-size: 1.1em;
 	font-family: 'Indie Flower', cursive;
@@ -22,40 +13,97 @@ nav li, nav li a, section {
 
 section div.section-center {
 	position: relative;
-    text-align: center;
-    font-size: 2em;
+	text-align: center;
+	font-size: 2em;
 }
 
-#container {
-	height:100%;
-}
-
-/* --- Header --- */
-#header-wrapper {
-	height: 50px;
-}
-#header {
-	position: absolute;
-    top: 17px;
-    right: 0;
-}
-
-#header-nav-wrapper {
-	position: relative;
-    margin: 0 20px;
-}
-
-#header-navigation {
-	position: relative;
-}
-
-.header-nav-separator:before {
-	content: "/";
-}
-
-/* --- Sections --- */
 #sections {
 	position: relative;
+	width: 100%;
+	margin-top: 10%;
+}
+
+/*--- Social footer --- */
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+.footer-social-icons {
+	bottom: 0;
+    position: fixed;
     width: 100%;
-    margin-top: 10%;
+}
+
+.social-icon {
+	color: #fff;
+}
+
+ul.social-icons {
+	margin-top: 10px;
+}
+
+.social-icons li {
+	vertical-align: top;
+	display: inline;
+	height: 100px;
+}
+
+.social-icons a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.fa-facebook {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.fa-facebook:hover {
+	background-color: #3d5b99;
+}
+
+.fa-github {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.fa-github:hover {
+	background-color: #eb8231;
+}
+
+.fa-linkedin {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+	/* background-color: #322f30; */
+}
+
+.fa-linkedin:hover {
+	background-color: #0073a4;
+}
+
+.fa-google-plus {
+	padding: 10px 9px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+	/* background-color: #322f30; */
+}
+
+.fa-google-plus:hover {
+	background-color: #e25714;
 }
