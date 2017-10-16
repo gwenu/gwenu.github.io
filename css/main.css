@@ -54,19 +54,6 @@ ul.social-icons {
 	text-decoration: none;
 }
 
-.fa-facebook {
-	padding: 10px 14px;
-	-o-transition: .5s;
-	-ms-transition: .5s;
-	-moz-transition: .5s;
-	-webkit-transition: .5s;
-	transition: .5s;
-}
-
-.fa-facebook:hover {
-	background-color: #3d5b99;
-}
-
 .fa-github {
 	padding: 10px 14px;
 	-o-transition: .5s;
@@ -77,7 +64,7 @@ ul.social-icons {
 }
 
 .fa-github:hover {
-	background-color: #eb8231;
+	background-color: #322f30;
 }
 
 .fa-linkedin {
@@ -87,7 +74,6 @@ ul.social-icons {
 	-moz-transition: .5s;
 	-webkit-transition: .5s;
 	transition: .5s;
-	/* background-color: #322f30; */
 }
 
 .fa-linkedin:hover {
@@ -101,9 +87,34 @@ ul.social-icons {
 	-moz-transition: .5s;
 	-webkit-transition: .5s;
 	transition: .5s;
-	/* background-color: #322f30; */
 }
 
 .fa-google-plus:hover {
 	background-color: #e25714;
+}
+
+.fa-facebook {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.fa-facebook:hover {
+	background-color: #3d5b99;
+}
+
+.fa-instagram {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.fa-instagram:hover {
+	background-color: #eb8231;
 }
