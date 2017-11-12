@@ -29,6 +29,10 @@ section {
 	font-family: 'Indie Flower', cursive;
 }
 
+.section-font {
+	font-size: 0.8em;
+}
+
 #section-home, 
 #section-about, 
 #section-skills {
@@ -141,4 +145,12 @@ ul.social-icons {
 
 .fa-instagram:hover {
 	background-color: #eb8231;
+}
+
+/*--- Canvas ---*/
+#space {
+  	position: absolute;
+	top: 0;
+	left: 0;
+  	background: rgb(2, 201, 201);
 }
