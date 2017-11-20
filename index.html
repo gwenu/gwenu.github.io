@@ -5,12 +5,26 @@
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/canvas.js"></script>
+    <script src="js/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 	<title>Home Page</title>
 </head>
 
-<body style = "background-color: rgb(2, 201, 201)">
+<body>
   <div id="container">
+    <nav id="nav-left" class="nav-left-panel">
+	    <ul>
+		    <li class="home">
+		    	<a class="nav-img"></a>
+		    </li>
+		    <li class="skills">
+		    	<a class="nav-img"></a>
+		    </li>
+		    <li class="countries">
+		    	<a class="nav-img"></a>
+		    </li>
+	    </ul>
+    </nav>
     <div id="sections">
 	    <!-- Home Section -->
     	<section id="section-home">
@@ -18,7 +32,7 @@
     			<canvas id="space"></canvas>
     		</div>
     	</section>
-	    <section id="section-about">
+	    <section id="section-skills">
 	    	<div class="section-left">
 	    		<div class="section-font">
 	    			<h4>Languages/ Technologies/Tools:</h4>
@@ -35,7 +49,7 @@
 	    		</div>
 	    	</div>
 	    </section>	
-	    <section id="section-skills">
+	    <section id="section-countries">
 	    	<div class="section-left">
 	    		<div class="section-font">
 	    			<h4>Visited countries:</h4>
@@ -59,6 +73,7 @@
 	    	</div>
 	    </section>	
 	    <!-- Contact Section -->
+	</div>
 		<div id="footer-social">
 			<div class="footer-social-icons">
 				<ul class="social-icons">
@@ -75,7 +90,6 @@
 				</ul>
 			</div>
 		</div>
-	</div>
   </div>
 </body>
 </html>

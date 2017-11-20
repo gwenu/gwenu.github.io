@@ -1,9 +1,12 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+	max-width: 100%;
+  	height: 100%;
+  	margin: 0;
+  	padding: 0;
+    overflow-x: hidden;
+  	background-color: #47a899;
 }
 
 #container {
@@ -11,11 +14,49 @@ body, html {
 	display: block;
 }
 
+/*--- Navigation ---*/
+.nav-left-panel {
+    display: none;
+    width:7%;
+    height:100%;
+    padding-top: 30px;
+    color: #fff;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 10;
+    background: #111;
+}
+
+.nav-img {
+	display: block;
+	width: 50px;
+	height: 70px;
+	margin: auto;
+}
+
+.home .nav-img {
+	background: url(../images/nav-home.svg);
+	background-repeat: no-repeat;
+}
+
+.skills .nav-img {
+	background: url(../images/nav-skills.svg);
+	background-repeat: no-repeat;
+}
+
+.countries .nav-img {
+	background: url(../images/nav-countries.svg);
+	background-repeat: no-repeat;
+}
+/*--- Navigation End ---*/
+
 /* --- Sections --- */
 #sections {
 	position: relative;
 	width: 100%;
 	height: 85%;
+	padding: 10px;
 	overflow: auto;
 }
 
@@ -34,8 +75,8 @@ section {
 }
 
 #section-home, 
-#section-about, 
-#section-skills {
+#section-skills, 
+#section-countries {
 	height: 100%;
 	display: block;
 }
@@ -48,8 +89,9 @@ section div.section-left {
 	text-align: center;
 	font-size: 2em;
 }
+/* --- Sections End --- */
 
-/*--- Social footer --- */
+/*--- Social Footer --- */
 ul {
 	margin: 0;
 	padding: 0;
@@ -61,6 +103,7 @@ ul {
     width: 100%;
     padding: 10px;
 	bottom: 0;
+	right:0;
 }
 
 .social-icon {
@@ -68,6 +111,7 @@ ul {
 }
 
 ul.social-icons {
+	float: right;
 	margin-top: 10px;
 }
 
@@ -146,11 +190,15 @@ ul.social-icons {
 .fa-instagram:hover {
 	background-color: #eb8231;
 }
+/*--- Social Footer End --- */
 
 /*--- Canvas ---*/
 #space {
   	position: absolute;
 	top: 0;
 	left: 0;
-  	background: rgb(2, 201, 201);
+  	background: #47a899;
+	/*--- #343b56 ---*/
 }
+/*--- Canvas End ---*/
+

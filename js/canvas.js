@@ -6,8 +6,7 @@ var stars = [];
 var fps = 50;
 var numStars = 1500;
 
-$('document').ready(function() {
-
+var drawCanvas = function() {
 	// Calculate the screen size
 	screenH = $(window).height() - 100;
 	screenW = $(window).width();
@@ -35,7 +34,8 @@ $('document').ready(function() {
 	}
 
 	setInterval(animate, 1000 / fps);
-});
+};
+
 
 /**
  * Animate the canvas
