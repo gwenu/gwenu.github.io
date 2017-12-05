@@ -36,17 +36,32 @@ body, html {
 }
 
 .home .nav-img {
-	background: url(../images/nav-home.svg);
+	background: url(../images/nav-home.png);
 	background-repeat: no-repeat;
 }
 
 .skills .nav-img {
-	background: url(../images/nav-skills.svg);
+	background: url(../images/nav-skills.png);
 	background-repeat: no-repeat;
 }
 
 .countries .nav-img {
-	background: url(../images/nav-countries.svg);
+	background: url(../images/nav-countries.png);
+	background-repeat: no-repeat;
+}
+
+.notes .nav-img {
+	background: url(../images/nav-notes.png);
+	background-repeat: no-repeat;
+}
+
+.bookmarks .nav-img {
+	background: url(../images/nav-bookmarks.png);
+	background-repeat: no-repeat;
+}
+
+.diff .nav-img {
+	background: url(../images/nav-diff.png);
 	background-repeat: no-repeat;
 }
 /*--- Navigation End ---*/
