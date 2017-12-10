@@ -6,7 +6,6 @@ body, html {
   	margin: 0;
   	padding: 0;
     overflow-x: hidden;
-  	background-color: #47a899;
 }
 
 #container {
@@ -24,9 +23,13 @@ body, html {
     opacity: 0.8;
 }
 
-#nav-down .nav-img {
-	background: url(../images/nav-down.png);
-	background-repeat: no-repeat;
+.nav-arrow-down {
+    border: solid #47a899;
+    border-width: 0 7px 7px 0;
+    display: inline-block;
+    padding: 7px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 .nav-left-panel {
@@ -49,35 +52,52 @@ body, html {
 	margin: auto;
 }
 
-.home .nav-img {
+#nav-home-section .nav-img {
 	background: url(../images/nav-home.png);
 	background-repeat: no-repeat;
 }
 
-.skills .nav-img {
+#nav-skills-section .nav-img {
 	background: url(../images/nav-skills.png);
 	background-repeat: no-repeat;
 }
 
-.countries .nav-img {
+#nav-countries-section .nav-img {
 	background: url(../images/nav-countries.png);
 	background-repeat: no-repeat;
 }
 
-.notes .nav-img {
+#nav-notes-section .nav-img {
 	background: url(../images/nav-notes.png);
 	background-repeat: no-repeat;
 }
 
-.bookmarks .nav-img {
+#nav-bookmarks-section .nav-img {
 	background: url(../images/nav-bookmarks.png);
 	background-repeat: no-repeat;
 }
 
-.diff .nav-img {
+#nav-diff-section .nav-img {
 	background: url(../images/nav-diff.png);
 	background-repeat: no-repeat;
 }
+
+.nav-active-indicator {
+    display: inline-block;
+    float: right;
+    margin-right: -15px;
+    margin-top: 50%;
+	width: 7px;
+    height: 7px;
+    background: white;
+	border-radius: 50%;
+}
+
+.nav-item:last-child {
+    content: '';
+    display: block;
+    position: absolute;
+  }
 /*--- Navigation End ---*/
 
 /* --- Sections --- */
@@ -94,7 +114,7 @@ body, html {
 }
 
 section {
-	color: white;
+	color: #47a899;
 	font-size: 1.1em;
 	font-family: 'Indie Flower', cursive;
 }
@@ -105,7 +125,10 @@ section {
 
 #section-home, 
 #section-skills, 
-#section-countries {
+#section-countries,
+#section-notes,
+#section-bookmarks,
+#section-diff {
 	height: 100%;
 	display: block;
 }
@@ -136,7 +159,7 @@ ul {
 }
 
 .social-icon {
-	color: #fff;
+	color: #47a899;
 }
 
 ul.social-icons {
@@ -151,8 +174,12 @@ ul.social-icons {
 }
 
 .social-icons a {
-	color: #fff;
+	color: #47a899;
 	text-decoration: none;
+}
+
+.social-icons a:hover {
+	color: #fff;
 }
 
 .fa-github {
@@ -226,7 +253,6 @@ ul.social-icons {
   	position: absolute;
 	top: 0;
 	left: 0;
-  	background: #47a899;
 	/*--- #343b56 ---*/
 }
 /*--- Canvas End ---*/

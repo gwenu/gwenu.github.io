@@ -5,6 +5,7 @@ var screenW;
 var stars = [];
 var fps = 50;
 var numStars = 1500;
+var color = "#47a899";
 
 var drawCanvas = function() {
 	// Calculate the screen size
@@ -47,7 +48,7 @@ function animate() {
 	})
 
 	context.font = "65px Indie Flower";
-	context.fillStyle = "#ffffff";
+	context.fillStyle = color;
 	context.fillText("Hey, I'm Olya", 500, 200);
 
 	context.font = "30px Indie Flower";
@@ -116,9 +117,9 @@ Star.prototype.draw = function() {
 	}
 	context.lineTo(0, this.length);
 	context.closePath();
-	context.fillStyle = "rgba(255, 255, 255, " + this.opacity + ")";
+	context.fillStyle = "rgba(71, 168, 153, " + this.opacity + ")";
 	context.shadowBlur = 9;
-	context.shadowColor = '#ffffff';
+	context.shadowColor = color;
 	context.fill();
 
 	context.restore();

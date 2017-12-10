@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
     <script src="js/canvas.js"></script>
     <script src="js/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
@@ -15,22 +16,22 @@
   <div id="container">
     <nav id="nav-left" class="nav-left-panel">
 	    <ul>
-		    <li class="home">
+		    <li id="nav-home-section">
+	    		<a class="nav-img"></a>
+		    </li>
+		    <li id="nav-skills-section">
 		    	<a class="nav-img"></a>
 		    </li>
-		    <li class="skills">
+		    <li id="nav-countries-section">
 		    	<a class="nav-img"></a>
 		    </li>
-		    <li class="countries">
+		    <li id="nav-notes-section">
 		    	<a class="nav-img"></a>
 		    </li>
-		    <li class="notes">
+		    <li id="nav-bookmarks-section">
 		    	<a class="nav-img"></a>
 		    </li>
-		    <li class="bookmarks">
-		    	<a class="nav-img"></a>
-		    </li>
-		    <li class="diff">
+		    <li id="nav-diff-section">
 		    	<a class="nav-img"></a>
 		    </li>
 	    </ul>
@@ -67,25 +68,40 @@
 			    		<li>1 - Austria</li>
 			    		<li>2 - Belarus, 3 - Belgium </li>
 			    		<li>4 - China, 5 - Cyprus, 6 - Czech Republic</li>
-			    		<li>7 - Denmark</li>
-			    		<li>8 - France</li>
-			    		<li>9 - Germany</li>
-			    		<li>10 - Hungary</li>
-			    		<li>11 - Ireland</li>
-			    		<li>12 - Netherlands</li>
-			    		<li>13 - Poland, 14 - Portugal</li>
-			    		<li>15 - Russian Federation</li>
+			    		<li>7 - Denmark, 8 - France, 9 - Germany</li>
+			    		<li>10 - Hungary, 11 - Ireland, 12 - Netherlands</li>
+			    		<li>13 - Poland, 14 - Portugal, 15 - Russian Federation</li>
 			    		<li>16 - Slovakia, 17 - Spain, 18 - Switzerland</li>
-			    		<li>19 - Turkey</li>
-			    		<li>20 - United Kingdom</li>
+			    		<li>19 - Turkey, 20 - United Kingdom</li>
 		    		</ul> 
 	    		</div>
 	    	</div>
+	    </section>
+	    <section id="section-notes">
+	    	<div class="section-left">
+	    		<div class="section-font">
+	    			<span>Here will go different notes</span>
+	    		</div>
+	    	</div>
 	    </section>	
+	    <section id="section-bookmarks">
+	    	<div class="section-left">
+	    		<div class="section-font">
+	    			<span>Here will go different bookmarks</span>
+	    		</div>
+	    	</div>
+	    </section>
+	    <section id="section-diff">
+	    	<div class="section-left">
+	    		<div class="section-font">
+	    			<span>Here will go different stuff</span>
+	    		</div>
+	    	</div>
+	    </section>
 	    <!-- Contact Section -->
 	</div>
   	<div id="nav-down">
- 		<div class="nav-img"></div>
+ 		<div class="nav-arrow-down"></div>
  	</div>
 	<div id="footer-social">
 		<div class="footer-social-icons">
