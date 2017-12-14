@@ -3,7 +3,7 @@ $('document').ready(function() {
 	$('#sections').scroll(function() {
 		var sectionHomeHeight = $('#section-home').height();
 		
-		if($('#sections').scrollTop() > sectionHomeHeight) {
+		if($('#sections').scrollTop() >= sectionHomeHeight) {
 			$('#nav-left').fadeIn("slow");
 			$('#nav-down').hide();
 		} else {
@@ -12,13 +12,14 @@ $('document').ready(function() {
 		}
 	});
 	
+	
 	$("#nav-down").click(function() {
-		$('#sections').scrollTo("#section-skills", 2000);
+		$('#sections').scrollTo("#section-skills", 1000);
 		appendNavActiveIndicator("#nav-skills-section");
 	});
 	
 	$("#nav-home-section").click(function() {
-		$('#sections').scrollTo("#section-home", 2000);
+		$('#sections').scrollTo("#section-home", 1000);
 	});
 	
 	$("#nav-skills-section").click(function() {

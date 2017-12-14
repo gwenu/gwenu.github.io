@@ -10,7 +10,7 @@ var color = "#47a899";
 var drawCanvas = function() {
 	// Calculate the screen size
 	screenH = $(window).height() - 100;
-	screenW = $(window).width();
+	screenW = $(window).width() - 100;
 
 	// Get the canvas
 	canvas = $('#space');
