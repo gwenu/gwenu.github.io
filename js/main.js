@@ -12,7 +12,6 @@ $('document').ready(function() {
 		}
 	});
 	
-	
 	$("#nav-down").click(function() {
 		$('#sections').scrollTo("#section-skills", 1000);
 		appendNavActiveIndicator("#nav-skills-section");

@@ -50,6 +50,7 @@ body, html {
 	width: 50px;
 	height: 70px;
 	margin: auto;
+	padding-right: 5%;
 }
 
 #nav-home-section .nav-img {
@@ -85,7 +86,7 @@ body, html {
 .nav-active-indicator {
     display: inline-block;
     float: right;
-    margin-right: -15px;
+    margin-right: -20%;
     margin-top: 50%;
 	width: 7px;
     height: 7px;
@@ -265,4 +266,3 @@ ul.social-icons {
     margin-right: auto;
 }
 /*--- Canvas End ---*/
-
