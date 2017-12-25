@@ -152,6 +152,31 @@ section div.section-left {
 	text-align: center;
 	font-size: 2em;
 }
+
+.section-left {
+	margin-left: 7%;
+}
+
+.section-grid {
+    float: left;
+	width: 45%;
+    padding: 10px;
+	text-align: left;
+	font-size: 0.8em;
+}
+
+.section-grid-content {
+	padding-left: 5%;
+}
+
+.section-grid-content ul {
+	color: #263238;
+	font-family: monospace;
+}
+
+.list-heading {
+	color: #D14836;
+}
 /* --- Sections End --- */
 
 /*--- Social Footer --- */
