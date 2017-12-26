@@ -1,11 +1,136 @@
 var canvas;
-var context;
 var screenH;
 var screenW;
-var stars = [];
-var fps = 50;
-var numStars = 1500;
-var color = "#47a899";
+var drawArea;
+var tid;
+var delay = 1000;
+var baseColor = "rgb(71, 168, 153)";
+var greyColor = "rgb(211, 211, 211)";
+var rgb = baseColor;
+
+let resizeReset = function() {
+	w = canvas.width = window.innerWidth - 100;
+	h = canvas.height = window.innerHeight - 100;
+}
+
+const title = {
+	main: "Hey, I'm Olya",
+	secondary: "Enthusiastic Software Engineer, traveler, positive human being :)", 
+	fontPlaceholder: "px Indie Flower",
+	fontSizeMain: 65,
+	fontSizeSecondary: 30
+};
+
+const opts = { 
+	particleColor: baseColor,
+	lineColor: baseColor,
+	particleAmount: 50,
+	defaultSpeed: 0.1,
+	variantSpeed: 0.05,
+	defaultRadius: 3,
+	variantRadius: 4,
+	linkRadius: 185,
+};
+
+window.addEventListener("resize", function(){
+	deBouncer();
+});
+
+let deBouncer = function() {
+    clearTimeout(tid);
+    tid = setTimeout(function() {
+        resizeReset();
+    }, delay);
+};
+
+let checkDistance = function(x1, y1, x2, y2){ 
+	return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+};
+
+let linkPoints = function(point1, hubs){ 
+	for (let i = 0; i < hubs.length; i++) {
+		let distance = checkDistance(point1.x, point1.y, hubs[i].x, hubs[i].y);
+		let opacity = 1 - distance / opts.linkRadius;
+		if (opacity > 0) { 
+			drawArea.lineWidth = 0.2;
+			drawArea.strokeStyle = i % 2 == 0 ? baseColor : greyColor;
+			drawArea.beginPath();
+			drawArea.moveTo(point1.x, point1.y);
+			drawArea.lineTo(hubs[i].x, hubs[i].y);
+			drawArea.closePath();
+			drawArea.stroke();
+		}
+	}
+}
+
+Particle = function(xPos, yPos){ 
+	this.x = Math.random() * w; 
+	this.y = Math.random() * h;
+	this.speed = opts.defaultSpeed + Math.random() * opts.variantSpeed; 
+	this.directionAngle = Math.floor(Math.random() * 360); 
+	this.color = opts.particleColor;
+	this.radius = opts.defaultRadius + Math.random() * opts. variantRadius; 
+	this.vector = {
+		x: Math.cos(this.directionAngle) * this.speed,
+		y: Math.sin(this.directionAngle) * this.speed
+	};
+	this.update = function(){ 
+		this.border(); 
+		this.x += this.vector.x; 
+		this.y += this.vector.y; 
+	};
+	this.border = function(){ 
+		if (this.x >= w || this.x <= 0) { 
+			this.vector.x *= -1;
+		}
+		if (this.y >= h || this.y <= 0) {
+			this.vector.y *= -1;
+		}
+		if (this.x > w) this.x = w;
+		if (this.y > h) this.y = h;
+		if (this.x < 0) this.x = 0;
+		if (this.y < 0) this.y = 0;	
+	};
+	this.draw = function(){ 
+		drawArea.beginPath();
+		drawArea.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+		drawArea.closePath();
+		drawArea.fillStyle = this.color;
+		drawArea.fill();
+	};
+};
+
+function setup(){ 
+	particles = [];
+	resizeReset();
+	for (let i = 0; i < opts.particleAmount; i++){
+		particles.push( new Particle() );
+	}
+	window.requestAnimationFrame(loop);
+}
+
+function loop(){ 
+	window.requestAnimationFrame(loop);
+	drawArea.clearRect(0,0,w,h);
+	for (let i = 0; i < particles.length; i++){
+		particles[i].update();
+		particles[i].draw();
+	}
+	for (let i = 0; i < particles.length; i++){
+		linkPoints(particles[i], particles);
+	}
+	
+	renderTitle();
+}
+
+function renderTitle() {
+	drawArea.font = title.fontSizeMain + title.fontPlaceholder;
+	drawArea.fillStyle = baseColor;
+	drawArea.fillText(title.main, 500, 200);
+
+	drawArea.font = title.fontSizeSecondary + title.fontPlaceholder;
+	drawArea.fillText(title.secondary, 300, 300);
+}
 
 var drawCanvas = function() {
 	// Calculate the screen size
@@ -18,109 +143,9 @@ var drawCanvas = function() {
 	// Fill out the canvas
 	canvas.attr('height', screenH);
 	canvas.attr('width', screenW);
-	context = canvas[0].getContext('2d');
-
-	// Create all the stars
-	for (var i = 0; i < numStars; i++) {
-		var x = Math.round(Math.random() * screenW);
-		var y = Math.round(Math.random() * screenH);
-		var length = 3 + Math.random() * 2;
-		var opacity = Math.random();
-
-		// Create a new star and draw
-		var star = new Star(x, y, length, opacity);
-
-		// Add the the stars array
-		stars.push(star);
-	}
-
-	setInterval(animate, 1000 / fps);
-};
-
-
-/**
- * Animate the canvas
- */
-function animate() {
-	context.clearRect(0, 0, screenW, screenH);
-	$.each(stars, function() {
-		this.draw(context);
-	})
-
-	context.font = "65px Indie Flower";
-	context.fillStyle = color;
-	context.fillText("Hey, I'm Olya", 500, 200);
-
-	context.font = "30px Indie Flower";
-	context
-			.fillText(
-					"Enthusiastic Software Engineer, traveler, positive human being :)",
-					300, 300);
-}
-
-/**
- * Star
- * 
- * @param int
- *            x
- * @param int
- *            y
- * @param int
- *            length
- * @param opacity
- */
-function Star(x, y, length, opacity) {
-	this.x = parseInt(x);
-	this.y = parseInt(y);
-	this.length = parseInt(length);
-	this.opacity = opacity;
-	this.factor = 1;
-	this.increment = Math.random() * .03;
-}
-
-/**
- * Draw a star
- * 
- * This function draws a start. You need to give the contaxt as a parameter
- * 
- * @param context
- */
-Star.prototype.draw = function() {
-	context.rotate((Math.PI * 1 / 10));
-
-	// Save the context
-	context.save();
-
-	// move into the middle of the canvas, just to make room
-	context.translate(this.x, this.y);
-
-	// Change the opacity
-	if (this.opacity > 1) {
-		this.factor = -1;
-	} else if (this.opacity <= 0) {
-		this.factor = 1;
-
-		this.x = Math.round(Math.random() * screenW);
-		this.y = Math.round(Math.random() * screenH);
-	}
-
-	this.opacity += this.increment * this.factor;
-
-	context.beginPath()
-	for (var i = 5; i--;) {
-		context.lineTo(0, this.length);
-		context.translate(0, this.length);
-		context.rotate((Math.PI * 2 / 10));
-		context.lineTo(0, -this.length);
-		context.translate(0, -this.length);
-		context.rotate(-(Math.PI * 6 / 10));
-	}
-	context.lineTo(0, this.length);
-	context.closePath();
-	context.fillStyle = "rgba(71, 168, 153, " + this.opacity + ")";
-	context.shadowBlur = 9;
-	context.shadowColor = color;
-	context.fill();
-
-	context.restore();
+	
+	drawArea = canvas[0].getContext('2d');
+	rgb = opts.lineColor.match(/\d+/g);
+	resizeReset();
+	setup();
 }
