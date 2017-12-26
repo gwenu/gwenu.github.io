@@ -6,7 +6,6 @@ var tid;
 var delay = 1000;
 var baseColor = "rgb(71, 168, 153)";
 var greyColor = "rgb(211, 211, 211)";
-var darkGreyColor = "rgb(169,169,169)";
 var rgb = baseColor;
 
 let resizeReset = function() {
@@ -127,7 +126,7 @@ function loop(){
 function renderTitle() {
 	drawArea.save();
 	
-	drawArea.shadowColor = darkGreyColor;
+	drawArea.shadowColor = greyColor;
 	drawArea.shadowOffsetX = 5; 
 	drawArea.shadowOffsetY = 5; 
 	drawArea.shadowBlur = 7;
