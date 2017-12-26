@@ -124,12 +124,17 @@ function loop(){
 }
 
 function renderTitle() {
+	drawArea.shadowColor = greyColor;
+	drawArea.shadowOffsetX = 5; 
+	drawArea.shadowOffsetY = 5; 
+	drawArea.shadowBlur = 7;
+	
 	drawArea.font = title.fontSizeMain + title.fontPlaceholder;
 	drawArea.fillStyle = baseColor;
-	drawArea.fillText(title.main, 500, 200);
+	drawArea.fillText(title.main, screenW/2 - 150, screenH/2 - 50);
 
 	drawArea.font = title.fontSizeSecondary + title.fontPlaceholder;
-	drawArea.fillText(title.secondary, 300, 300);
+	drawArea.fillText(title.secondary, screenW/2 - 350, screenH/2 + 50);
 }
 
 var drawCanvas = function() {
