@@ -41,7 +41,7 @@ body, html {
     position:fixed;
     top:0;
     left:0;
-    z-index: 10;
+    z-index: 20;
     background: #111;
 }
 
@@ -108,6 +108,7 @@ body, html {
 	height: 85%;
 	padding-bottom: 10px;
 	overflow: scroll;
+	z-index: 10;
 }
 
 #footer-social {
@@ -165,17 +166,14 @@ section div.section-left {
 	margin-right: 2%;
 }
 
-.section-content-wrapper.img-align-right {
+.background-align-right {
+	position: fixed;
+	width: 100%;
+    height: 100%;
+    bottom: 0;
 	background-image: url("../images/sectionBackgroundRight.jpg");
 	background-position: right bottom;
-	background-size: 50% auto;
-	background-repeat: no-repeat;
-}
-
-.section-content-wrapper.img-align-left {
-	background-image: url("../images/sectionBackgroundLeft.jpg");
-	background-position: left bottom;
-	background-size: 50% auto;
+	background-size: 35% auto;
 	background-repeat: no-repeat;
 }
 
@@ -214,7 +212,6 @@ section div.section-left {
   border-bottom:1px solid #D14836;
 }
 
-/* #2c44a0 blue colour for content */
 /* --- Sections End --- */
 
 /*--- Social Footer --- */
@@ -222,6 +219,10 @@ ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.footer-social-icons ul {
+	background-color: white;
 }
 
 .footer-social-icons {

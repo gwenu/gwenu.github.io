@@ -4,9 +4,11 @@ $('document').ready(function() {
 		var sectionHomeHeight = $('#section-home').height();
 		
 		if($('#sections').scrollTop() >= sectionHomeHeight) {
+			$('#containerBackground').addClass("background-align-right");
 			$('#nav-left').fadeIn("slow");
 			$('#nav-down').hide();
 		} else {
+			$('#containerBackground').removeClass("background-align-right");
 			$('#nav-left').fadeOut();
 			$('#nav-down').fadeIn("slow");
 		}
