@@ -167,6 +167,10 @@ section div.section-left {
 	margin-right: 2%;
 }
 
+.section-content-wrapper a {
+	color: #696969;
+}
+
 .background-align-right {
 	position: fixed;
 	width: 100%;
