@@ -74,13 +74,18 @@ body, html {
 	background-repeat: no-repeat;
 }
 
-#nav-bookmarks-section .nav-img {
-	background: url(../images/nav-bookmarks.png);
+#nav-experience-section .nav-img {
+	background: url(../images/nav-experience.png);
 	background-repeat: no-repeat;
 }
 
 #nav-diff-section .nav-img {
 	background: url(../images/nav-diff.png);
+	background-repeat: no-repeat;
+}
+
+#nav-misc-section .nav-img {
+	background: url(../images/nav-misc.png);
 	background-repeat: no-repeat;
 }
 
@@ -136,8 +141,9 @@ section {
 #section-skills, 
 #section-countries,
 #section-notes,
-#section-bookmarks,
-#section-diff {
+#section-experience,
+#section-diff,
+#section-misc {
 	height: 100%;
 	display: block;
 	overflow: hidden;
@@ -194,7 +200,7 @@ section div.section-left {
 	padding-left: 5%;
 }
 
-.section-grid-content ul {
+.section-grid-content {
 	line-height: 1.5;
 	color: #696969;
 	font-family: 'Raleway', sans-serif;
@@ -226,57 +232,31 @@ section div.section-left {
 	box-shadow: 0px 5px rgba(192,192,192,0.1);
 }
 
-.skills-list-img {
-	position: absolute;
+.section-grid-vertical-row {
 	display: inline-block;
-	opacity: 0.7;
+    width: 100%;
 }
 
-.skills-java-img {
-    margin-top: -15px;
-    margin-left: 20%;
-	content: url('../images/skills-java.png');
+.section-grid-vertical-col1, 
+.section-grid-vertical-col2 {
+	display: inline-block;
+	float: left;
+	text-align: left;
 }
 
-.skills-html-img {
-    margin-top: -10px;
-    margin-left: 5%;
-	content: url('../images/skills-html.jpg');
+.section-grid-vertical-col1 {
+	width: 50%;
 }
 
-.skills-javascript-img {
-    margin-left: 12%;
-	content: url('../images/skills-javascript.png');
+.section-grid-vertical-col2 {
+	width: 30%;
 }
 
-.skills-gradle-img {
-    margin-top: -15px;
-    margin-left: 12%;
-	content: url('../images/skills-gradle.png');
-}
-
-.skills-maven-img {
-	margin-top: 5px;
-    margin-left: 10%;
-	content: url('../images/skills-maven.png');
-}
-
-.skills-git-img {
-	margin-top: 5px;
-    margin-left: 10%;
-	content: url('../images/skills-git.png');
-}
-
-.skills-bamboo-img {
-	margin-top: 5px;
-    margin-left: 10%;
-	content: url('../images/skills-bamboo.png');
-}
-
-.skills-jenkins-img {
-	margin-top: -10px;
-    margin-left: 5%;
-	content: url('../images/skills-jenkins.png');
+.vertical-grid-col-heading {
+	display: block;
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: #D14836;
 }
 
 /* --- Sections End --- */

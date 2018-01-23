@@ -38,14 +38,19 @@ $('document').ready(function() {
 		appendNavActiveIndicator("#nav-notes-section");
 	});
 	
-	$("#nav-bookmarks-section").click(function() {
-		$('#sections').scrollTo("#section-bookmarks", 1000);
-		appendNavActiveIndicator("#nav-bookmarks-section");
+	$("#nav-experience-section").click(function() {
+		$('#sections').scrollTo("#section-experience", 1000);
+		appendNavActiveIndicator("#nav-experience-section");
 	});
 	
 	$("#nav-diff-section").click(function() {
 		$('#sections').scrollTo("#section-diff", 1000);
 		appendNavActiveIndicator("#nav-diff-section");
+	});
+	
+	$("#nav-misc-section").click(function() {
+		$('#sections').scrollTo("#section-misc", 1000);
+		appendNavActiveIndicator("#nav-misc-section");
 	});
 	
 	function appendNavActiveIndicator(activeNavItem) {
