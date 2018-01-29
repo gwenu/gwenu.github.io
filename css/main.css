@@ -196,6 +196,10 @@ section div.section-left {
 	font-size: 0.8em;
 }
 
+.section-grid.horizontally-aligned {
+	width: 22%;
+}
+
 .section-grid-content {
 	padding-left: 5%;
 }
@@ -229,12 +233,18 @@ section div.section-left {
 
 .section-grid-title {
 	padding-right: 20px;
-	box-shadow: 0px 5px rgba(192,192,192,0.1);
 }
 
 .section-grid-vertical-row {
 	display: inline-block;
     width: 100%;
+    margin-bottom: 2%;
+}
+
+.sub-section {
+	margin-top: 5%;
+	padding-top: 1%;
+	border-top: 1px solid #ccc;
 }
 
 .section-grid-vertical-col1, 
@@ -245,7 +255,7 @@ section div.section-left {
 }
 
 .section-grid-vertical-col1 {
-	width: 50%;
+	width: 60%;
 }
 
 .section-grid-vertical-col2 {
@@ -257,6 +267,14 @@ section div.section-left {
 	font-weight: bold;
 	font-size: 1.1rem;
 	color: #D14836;
+}
+
+.section-list li::before {
+	content: "•"; 
+	color: #47a899;
+	width: 1em;
+    margin-left: 1em;
+    margin-right: 0.5em;
 }
 
 /* --- Sections End --- */
