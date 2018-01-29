@@ -122,9 +122,13 @@ body, html {
 }
 
 section {
-	color: #47a899;
+	color: #D14836;
 	font-size: 1.1em;
 	font-family: 'Indie Flower', cursive;
+}
+
+.countries-section-font {
+	color: #47a899;
 }
 
 .section-font {
@@ -135,6 +139,7 @@ section {
 
 .section-font h4 {
 	margin: 15px 0;
+	background-color: #f9f9f9;
 }
 
 #section-home, 
@@ -214,7 +219,7 @@ section div.section-left {
 }
 
 .list-heading {
-	color: #D14836;
+	color: #47a899;
 }
 
 .section-grid-content h3{
@@ -228,7 +233,7 @@ section div.section-left {
   display: block;
   width:100%; height:100%;
   margin-right:-100%;
-  border-bottom:1px solid #D14836;
+  border-bottom:1px solid #47a899;
 }
 
 .section-grid-title {
@@ -266,7 +271,7 @@ section div.section-left {
 	display: block;
 	font-weight: bold;
 	font-size: 1.1rem;
-	color: #D14836;
+	color: #47a899;
 }
 
 .section-list li::before {
