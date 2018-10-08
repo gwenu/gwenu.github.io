@@ -6,7 +6,11 @@ var tid;
 var delay = 1000;
 var baseColor = "rgb(71, 168, 153)";
 var greyColor = "rgb(211, 211, 211)";
+var imgBoarderColor = "rgb(71, 168, 153, 0.8)";
 var rgb = baseColor;
+
+var thumbImg = document.createElement('img');
+thumbImg.src = 'images/home_photo.jpg';
 
 let resizeReset = function() {
 	w = canvas.width = window.innerWidth - 100;
@@ -121,6 +125,7 @@ function loop(){
 	}
 	
 	renderTitle();
+	renderPhoto(drawArea, thumbImg);
 }
 
 function renderTitle() {
@@ -133,13 +138,27 @@ function renderTitle() {
 	
 	drawArea.font = title.fontSizeMain + title.fontPlaceholder;
 	drawArea.fillStyle = baseColor;
-	drawArea.fillText(title.main, screenW/2 - 150, screenH/2 - 50);
+	drawArea.fillText(title.main, screenW/2 - 150, screenH/2);
 
 	drawArea.font = title.fontSizeSecondary + title.fontPlaceholder;
-	drawArea.fillText(title.secondary, screenW/2 - 350, screenH/2 + 50);
+	drawArea.fillText(title.secondary, screenW/2 - 350, screenH/2 + 70);
 	
 	drawArea.restore();
 }
+
+function renderPhoto(drawArea, thumbImg) {
+	drawArea.save();
+	drawArea.beginPath();
+	drawArea.strokeStyle = imgBoarderColor;
+	drawArea.lineWidth = 10;
+	drawArea.arc(screenW/2 + 310, screenH/2 - 60, 100, 0, Math.PI * 2, true);
+	drawArea.closePath();
+	drawArea.clip();
+
+	drawArea.drawImage(thumbImg, screenW/2 + 180, screenH/2 - 180, 250, 250);
+	drawArea.stroke();
+	drawArea.restore();
+};
 
 var drawCanvas = function() {
 	// Calculate the screen size
