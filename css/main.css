@@ -176,7 +176,7 @@ section div.section-left {
 	height: 100%;
 	margin-left: 2%;
 	margin-right: 2%;
-	padding-top: 2%;
+	padding-top: 1%;
 }
 
 .section-content-wrapper a {
@@ -267,6 +267,7 @@ section div.section-left {
 
 .timeline .section-grid-vertical-row {
 	margin-bottom: 0;
+	padding-bottom: 7px;
 }
 
 .timeline:before {
@@ -303,11 +304,21 @@ section div.section-left {
 .timeline .section-grid-vertical-col2 {
 	width: 60%;
 }
+
+.timeline .vertical-grid-col-sub-heading {
+	font-size: 0.9rem;
+}
+
 .vertical-grid-col-heading {
 	display: block;
 	font-weight: bold;
 	font-size: 1.1rem;
 	color: #47a899;
+}
+
+.timeline .vertical-grid-col-heading { 
+	font-size: 1rem;
+	color: #696969;
 }
 
 .section-list li::before {
