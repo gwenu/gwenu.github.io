@@ -265,10 +265,44 @@ section div.section-left {
 	width: 60%;
 }
 
+.timeline .section-grid-vertical-row {
+	margin-bottom: 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 30%;
+    bottom: 0px;
+    width: 4px;
+    background: #ddd;
+  }
+  
+ .timeline-title:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 4px solid #47a899;
+    background-color: #fff;
+    border-radius:100%;
+    left: calc(30% - 6px);
+    z-index: 99;
+}
+
+.timeline .section-grid-vertical-col1 {
+	width: 30%;
+	font-size: 0.9rem;
+}
+
 .section-grid-vertical-col2 {
 	width: 30%;
 }
 
+.timeline .section-grid-vertical-col2 {
+	width: 60%;
+}
 .vertical-grid-col-heading {
 	display: block;
 	font-weight: bold;
@@ -283,7 +317,6 @@ section div.section-left {
     margin-left: 1em;
     margin-right: 0.5em;
 }
-
 /* --- Sections End --- */
 
 /*--- Social Footer --- */
