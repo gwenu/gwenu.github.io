@@ -87,6 +87,7 @@ body, html {
 #nav-misc-section .nav-img {
 	background: url(../images/nav-misc.png);
 	background-repeat: no-repeat;
+	visibility: hidden;
 }
 
 .nav-active-indicator {

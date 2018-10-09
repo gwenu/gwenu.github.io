@@ -48,10 +48,10 @@ $('document').ready(function() {
 		appendNavActiveIndicator("#nav-diff-section");
 	});
 	
-	$("#nav-misc-section").click(function() {
-		$('#sections').scrollTo("#section-misc", 1000);
-		appendNavActiveIndicator("#nav-misc-section");
-	});
+//	$("#nav-misc-section").click(function() {
+//		$('#sections').scrollTo("#section-misc", 1000);
+//		appendNavActiveIndicator("#nav-misc-section");
+//	});
 	
 	function appendNavActiveIndicator(activeNavItem) {
 		var activeSectionIndicator = $("<i>", {"class": "nav-active-indicator"});
