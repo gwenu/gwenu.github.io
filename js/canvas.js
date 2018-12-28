@@ -132,9 +132,9 @@ function renderTitle() {
 	drawArea.save();
 	
 	drawArea.shadowColor = greyColor;
-	drawArea.shadowOffsetX = 5; 
-	drawArea.shadowOffsetY = 5; 
-	drawArea.shadowBlur = 7;
+	drawArea.shadowOffsetX = 3; 
+	drawArea.shadowOffsetY = 3; 
+	drawArea.shadowBlur = 3;
 	
 	drawArea.font = title.fontSizeMain + title.fontPlaceholder;
 	drawArea.fillStyle = baseColor;
