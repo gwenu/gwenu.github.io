@@ -54,13 +54,9 @@ body, html {
 @media screen and (max-width: 768px) {
   /* For mobile phones: */
   #containerBackground {
-  	height: 768px;
-  	width: auto;
+    height: 100%;
 	background-image: url(../images/home_photo_small.jpg);
-	background-position: center;
-  	background-repeat: no-repeat;
-  	background-size: cover;
-  	background-attachment: fixed;
+	background-size: initial;
   }
   .container-centered {
     width: 100%;
