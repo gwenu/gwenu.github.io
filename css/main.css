@@ -25,11 +25,15 @@ body, html {
 	padding: 20px;
 }
 
+.container-centered a {
+	text-decoration: none;
+}
+
 #navbar {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 
 .navbar-fixed {
