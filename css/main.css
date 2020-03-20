@@ -51,10 +51,11 @@ body, html {
 	transition: margin 700ms;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* For mobile phones: */
   #containerBackground {
-  	height: 100%;
+  	height: 768px;
+  	width: auto;
 	background-image: url(../images/home_photo_small.jpg);
 	background-position: center;
   	background-repeat: no-repeat;
