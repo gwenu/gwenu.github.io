@@ -5,7 +5,7 @@ body, html {
 
 #containerBackground {
 	height: 100%;
-	background-image: url(../images/home_photo_2.jpg);
+	background-image: url(../images/home_photo_large.jpg);
 	background-position: center;
   	background-repeat: no-repeat;
   	background-size: cover;
@@ -52,13 +52,13 @@ body, html {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   /* For mobile phones: */
   #containerBackground {
-	width: auto;
-	height: 500px;
+	background-image: url(../images/home_photo_small.jpg);
   }
   .container-centered {
     width: 100%;
+    padding: 5px;
   }
 }
