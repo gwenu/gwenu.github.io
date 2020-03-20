@@ -56,7 +56,7 @@ body, html {
   #containerBackground {
     height: 100%;
 	background-image: url(../images/home_photo_small.jpg);
-	background-size: initial;
+	background-size: 80%;
   }
   .container-centered {
     width: 100%;
