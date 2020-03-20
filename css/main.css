@@ -3,18 +3,6 @@ body, html {
   	margin: 0;
 }
 
-@media only screen and (max-width: 1024px) {
-  /* For mobile phones: */
-  #containerBackground {
-  	height: 100%;
-	background-image: url(../images/home_photo_small.jpg);
-  }
-  .container-centered {
-    width: 100%;
-    padding: 5px;
-  }
-}
-
 #containerBackground {
 	height: 100%;
 	background-image: url(../images/home_photo_large.jpg);
@@ -61,4 +49,16 @@ body, html {
 #nav-title.navbar-fixed {
 	margin-top: 10px;
 	transition: margin 700ms;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #containerBackground {
+  	height: 100%;
+	background-image: url(../images/home_photo_small.jpg);
+  }
+  .container-centered {
+    width: 100%;
+    padding: 5px;
+  }
 }

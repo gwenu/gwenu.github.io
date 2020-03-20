@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="icon" type="image/ico" href="images/favicon.ico" />
     
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,6 +17,7 @@
 	</style>
 	<title>About Everything</title>
 </head>
+
 <body class="w3-light-grey">
 	<div id="containerBackground"></div>
 		<div id="navbar">
@@ -170,23 +172,21 @@
 		</div>
 	</div>
 	
-	
 	<script>
-	window.onscroll = function() {myFunction()};
-	
-	var navbar = document.getElementById("navbar");
-	var title = document.getElementById("nav-title");
-	var fromTop = 50
-	
-	function myFunction() {
-	  if (window.pageYOffset >= fromTop) {
-		  navbar.classList.add("navbar-fixed");
-		  title.classList.add("navbar-fixed");
-	  } else {
-		  navbar.classList.remove("navbar-fixed");
-		  title.classList.remove("navbar-fixed");
-	  }
-	} 
+		window.onscroll = function() {myFunction()};
+		
+		var navbar = document.getElementById("navbar");
+		var title = document.getElementById("nav-title");
+		var fromTop = 50;
+		
+		function myFunction() {
+		  if (window.pageYOffset >= fromTop) {
+			  navbar.classList.add("navbar-fixed");
+			  title.classList.add("navbar-fixed");
+		  } else {
+			  navbar.classList.remove("navbar-fixed");
+			  title.classList.remove("navbar-fixed");
+		  }
+		} 
 	</script>
 </body>
-
