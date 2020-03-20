@@ -20,7 +20,7 @@ body, html {
 }
 
 .container-centered {
-	width: 50%;
+	width: 45%;
 	margin: 0 auto;
 	padding: 20px;
 }
@@ -49,4 +49,16 @@ body, html {
 #nav-title.navbar-fixed {
 	margin-top: 10px;
 	transition: margin 700ms;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #containerBackground {
+	width: auto;
+	height: 500px;
+  }
+  .container-centered {
+    width: 100%;
+  }
 }
