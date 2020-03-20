@@ -55,6 +55,7 @@ body, html {
 @media only screen and (max-width: 1024px) {
   /* For mobile phones: */
   #containerBackground {
+  	height: 100%;
 	background-image: url(../images/home_photo_small.jpg);
   }
   .container-centered {
