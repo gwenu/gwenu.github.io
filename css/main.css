@@ -55,6 +55,10 @@ body, html {
 	transition: margin 700ms;
 }
 
+.cert-section {
+	margin-bottom: 0;
+}
+
 @media screen and (max-width: 768px) {
   /* For mobile phones: */
   #containerBackground {
