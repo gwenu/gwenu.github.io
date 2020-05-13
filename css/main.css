@@ -55,8 +55,12 @@ body, html {
 	transition: margin 700ms;
 }
 
-.cert-section {
+.skills-section {
 	margin-bottom: 0;
+}
+
+.skills-section-container {
+	margin-bottom: 1.2em;
 }
 
 @media screen and (max-width: 768px) {
