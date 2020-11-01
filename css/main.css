@@ -77,10 +77,15 @@ body, html {
 
 @media screen and (max-width: 768px) {
   /* For mobile phones: */
+  #container {
+  	width: 97%;
+  }
+  
   #containerBackground {
   	height: 0;
 	background-image: none;
   }
+  
   .container-centered {
     width: 100%;
     padding: 5px;
